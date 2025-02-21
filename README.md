@@ -32,17 +32,17 @@ Before you begin, ensure you have the following installed:
 
 ### Backend Setup
 1. Clone the repository to your local machine:
-
+```bash
    git clone https://github.com/khbmh/Fluxen
 
 
 2. Navigate to the backend directory:
-
+```bash
    cd backend
 
 
 3. Install the backend dependencies:
-
+```bash
    npm install
 
 
@@ -51,23 +51,23 @@ Before you begin, ensure you have the following installed:
    - MongoDB connection string
 
 5. Start the backend server:
-
+```bash
    npm start
 
 
 ### Frontend Setup
 1. Navigate to the frontend directory:
-
+```bash
    cd frontend
 
 
 2. Install the frontend dependencies:
-
+```bash
    npm install
 
 
 3. Start the frontend development server:
-
+```bash
    npm run dev
 
 
