@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+* {
+  font-family: "Open Sans", serif;
+  transition: background-color .4s ease-in-out;
+}
+
+.logo {
+  font-family: "Train One", serif;
+}
+
+.heading,
+ul {
+  font-family: "Kanit", serif;
+}
+
+button {
+  cursor: pointer;
+  padding: 2px 7px;
+}

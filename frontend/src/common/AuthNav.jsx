@@ -3,8 +3,8 @@ import { NavLink } from 'react-router';
 function AuthNav() {
   return (
     <div>
-      <ul>
-        <NavLink to="/">Home</NavLink>
+      <ul className={`p-2 pt-5`}>
+        <NavLink className='logo text-2xl' to="/">Fluxen</NavLink>
       </ul>
     </div>
   );

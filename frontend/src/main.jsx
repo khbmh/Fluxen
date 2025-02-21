@@ -10,22 +10,58 @@ import AuthLayout from './layout/AuthLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Error from './pages/Error';
+import AuthProvider from './contexts/AuthProvider';
+import PrivateRoutes from './utils/PrivateRoutes';
+import PublicRoutes from './utils/PublicRoutes';
+import Data from './contexts/Data';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="tasks" element={<Tasks />} />
-        </Route>
-        <Route element={<AuthLayout />}>
-          <Route path="auth/login" element={<Login />} />
-          <Route path="auth/register" element={<Register />} />
-        </Route>
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <Data>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<MainLayout />}>
+              <Route index element={<Home />} />
+              <Route
+                path="profile"
+                element={
+                  <PrivateRoutes>
+                    <Profile />
+                  </PrivateRoutes>
+                }
+              />
+              <Route
+                path="tasks"
+                element={
+                  <PrivateRoutes>
+                    <Tasks />
+                  </PrivateRoutes>
+                }
+              />
+            </Route>
+            <Route element={<AuthLayout />}>
+              <Route
+                path="auth/login"
+                element={
+                  <PublicRoutes>
+                    <Login />
+                  </PublicRoutes>
+                }
+              />
+              <Route
+                path="auth/register"
+                element={
+                  <PublicRoutes>
+                    <Register />
+                  </PublicRoutes>
+                }
+              />
+            </Route>
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </BrowserRouter>
+      </Data>
+    </AuthProvider>
   </StrictMode>,
 );
