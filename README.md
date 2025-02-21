@@ -1,4 +1,4 @@
-```markdown
+
 # Fluxen : Task Management Application
 
 Fluxen is a task management application that allows users to add, edit, delete, reorder, and manage tasks using a drag-and-drop interface. Tasks are categorized into **To-Do**, **In Progress**, and **Done** categories. The app uses **Firebase Authentication** for secure login, **MongoDB** for data storage, and real-time updates to keep the task list synced across all devices.
@@ -32,44 +32,44 @@ Before you begin, ensure you have the following installed:
 
 ### Backend Setup
 1. Clone the repository to your local machine:
-   ```bash
+
    git clone https://github.com/khbmh/Fluxen
-   ```
+
 
 2. Navigate to the backend directory:
-   ```bash
+
    cd backend
-   ```
+
 
 3. Install the backend dependencies:
-   ```bash
+
    npm install
-   ```
+
 
 4. Set up your environment variables. You'll need:
    - Firebase credentials for authentication
    - MongoDB connection string
 
 5. Start the backend server:
-   ```bash
+
    npm start
-   ```
+
 
 ### Frontend Setup
 1. Navigate to the frontend directory:
-   ```bash
+
    cd frontend
-   ```
+
 
 2. Install the frontend dependencies:
-   ```bash
+
    npm install
-   ```
+
 
 3. Start the frontend development server:
-   ```bash
+
    npm run dev
-   ```
+
 
 4. Once both servers are running, you can access the app at `http://localhost:3000` on your browser.
 
