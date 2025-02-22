@@ -8,7 +8,6 @@ import { PiMoonStarsLight } from 'react-icons/pi';
 function Navbar() {
   const { user } = useContext(AuthContext);
   const { handleDark, isDark } = useContext(DataContext);
-  console.log(isDark);
   return (
     <div className="h-[10vh] lg:h-[12vh] w-full">
       <ul
